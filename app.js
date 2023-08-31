@@ -14,7 +14,10 @@ const app =express();
 const PORT=process.env.PORT||3001;
  
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+  origin: 'https://panchat-api-1p4l.onrender.com/', // Set the origin of your frontend
+  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+}));
 
 connectDB();
 
