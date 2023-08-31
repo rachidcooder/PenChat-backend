@@ -28,22 +28,13 @@ const io = new Server(server,{
     pingTimeout: 60000,
   cors: {
     origin: "https://panchat-api-1p4l.onrender.com/",
-    // credentials: true,
+    credentials: true,
   }});
 
   server.listen(PORT,()=>{
   console.log("listening to the port : ",PORT);
 })
 
-
-
-// io(server,{
-//     pingTimeout: 60000,
-//   cors: {
-//     origin: "http://localhost:3000",
-//     // credentials: true,
-//   },
-// })
 
 io.on("connection", (socket) => {
   console.log("Connected to socket.io");
