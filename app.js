@@ -24,6 +24,9 @@ connectDB();
  app.use("/api/user",Userroute);
  app.use("/api/chat",chatRoute);
 app.use("/api/message",MessageRoute);
+app.use("*",(req,res)=>{
+  res.send("<h1>Error 404 Not Found!</h1>");
+})
 
 const server = http.createServer(app);
 
