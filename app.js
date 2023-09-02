@@ -33,7 +33,7 @@ const server = http.createServer(app);
 const io = new Server(server,{
     pingTimeout: 60000,
   cors: {
-    origin: "https://panchat-api-1p4l.onrender.com/",
+    origin: "https://panchat-api-1p4l.onrender.com",
     credentials: true,
   }});
 
